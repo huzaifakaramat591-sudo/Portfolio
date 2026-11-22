@@ -18,7 +18,7 @@
 *{box-sizing:border-box}
 html,body{background:var(--void);margin:0}
 body{
-  color:var(--ink);font-family:var(--mono);font-size:14px;line-height:1.55;
+  color:var(--ink);font-family:var(--mono);font-size:17px;line-height:1.6;
   padding-left:max(16px,env(safe-area-inset-left,0px));
   padding-right:max(16px,env(safe-area-inset-right,0px));
   -webkit-text-size-adjust:100%;
@@ -32,7 +32,7 @@ body{
 #halftone{position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);max-width:100%}
 .hud{position:fixed;left:0;right:0;z-index:5;display:flex;justify-content:space-between;gap:16px;
   padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));
-  font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);pointer-events:none;transition:color .3s}
+  font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);pointer-events:none;transition:color .3s}
 .hud.top{top:calc(env(safe-area-inset-top,0px) + 14px)}
 .hud.bot{bottom:calc(env(safe-area-inset-bottom,0px) + 14px);color:var(--dim)}
 .hud b{font-weight:500}
@@ -41,35 +41,35 @@ body{
   bottom:calc(env(safe-area-inset-bottom,0px) + 56px);
   padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));
   will-change:opacity,transform}
-.panel .in{max-width:620px;padding:18px 18px 20px;
+.panel .in{max-width:640px;padding:20px 18px 22px;
   background:color-mix(in srgb,var(--bgc) 62%,transparent);
   -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
   border-left:2px solid var(--accent)}
 .panel.hero .in{background:none;-webkit-backdrop-filter:none;backdrop-filter:none;border:0;padding:0;max-width:760px}
 .panel.hero{bottom:calc(env(safe-area-inset-bottom,0px) + 64px)}
-.kicker{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 12px}
+.kicker{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 12px}
 h1,h2{font-family:var(--display);margin:0;line-height:1.02;text-wrap:balance;font-weight:800;text-transform:uppercase}
 h1{font-size:clamp(40px,12vw,104px);letter-spacing:-.02em}
-h2{font-size:clamp(22px,5.2vw,40px);letter-spacing:-.01em}
-p{margin:12px 0 0;max-width:52ch;color:var(--ink)}
+h2{font-size:clamp(26px,7vw,44px);letter-spacing:-.01em}
+p{margin:14px 0 0;max-width:52ch;color:var(--ink);font-size:17px}
 .sub{color:var(--dim)}
-.cue{margin-top:22px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);display:flex;align-items:center;gap:10px}
+.cue{margin-top:22px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);display:flex;align-items:center;gap:10px}
 .cue i{display:inline-block;width:1px;height:28px;background:currentColor;animation:drop 1.6s ease-in-out infinite;transform-origin:top}
 @keyframes drop{0%{transform:scaleY(0)}60%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
 ul.cap{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:1fr;gap:0}
-ul.cap li{display:flex;gap:14px;padding:9px 0;border-top:1px solid color-mix(in srgb,var(--ink) 22%,transparent)}
+ul.cap li{display:flex;gap:14px;padding:10px 0;font-size:17px;border-top:1px solid color-mix(in srgb,var(--ink) 22%,transparent)}
 ul.cap li span{color:var(--accent);min-width:2ch}
-.facts{display:grid;gap:10px;margin-top:16px}
+.facts{display:grid;gap:10px;margin-top:16px;font-size:17px}
 .facts div{display:flex;justify-content:space-between;gap:16px;border-top:1px solid color-mix(in srgb,var(--ink) 22%,transparent);padding-top:8px}
 .facts dt{color:var(--dim)}.facts dd{margin:0;text-align:right}
 .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
-.btn{pointer-events:auto;display:inline-block;color:var(--ink);text-decoration:none;border:1px solid var(--ink);padding:12px 18px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-family:var(--mono);background:transparent;cursor:pointer}
+.btn{pointer-events:auto;display:inline-block;color:var(--ink);text-decoration:none;border:1px solid var(--ink);padding:14px 22px;font-size:15px;letter-spacing:.14em;text-transform:uppercase;font-family:var(--mono);background:transparent;cursor:pointer}
 .btn:hover,.btn:focus-visible{background:var(--accent);border-color:var(--accent);color:#120403;outline:none}
 .btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 #mail{user-select:all}
 #loader{position:fixed;inset:0;z-index:20;background:var(--void);display:grid;place-items:center;
   animation:loaderOut .5s 1.5s forwards}
-#loader div{width:min(220px,60vw);text-align:center;font-size:11px;letter-spacing:.3em;color:var(--ink)}
+#loader div{width:min(220px,60vw);text-align:center;font-size:13px;letter-spacing:.3em;color:var(--ink)}
 #loader i{display:block;height:2px;margin-top:12px;background:rgba(244,246,255,.2);position:relative;overflow:hidden}
 #loader i::after{content:"";position:absolute;inset:0;background:var(--ink);transform-origin:0 50%;animation:fill 1.35s cubic-bezier(.6,0,.2,1) forwards}
 @keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
